@@ -1,0 +1,43 @@
+Guía para Windows
+
+Paso 1: Requisitos previos
+
+    Descarga e instala Python 3.x desde python.org. Asegúrate de marcar la opción "Add Python to PATH" durante la instalación.
+    Instala Git for Windows (opcional pero recomendado para clonar el repositorio).
+    Cuenta con un editor de texto (por ejemplo, Visual Studio Code).
+
+Paso 2: Clonar el repositorio
+Puedes clonar el repositorio usando Git Bash, CMD o PowerShell. Por ejemplo, en CMD:
+
+git clone https://github.com/1nzekt0/Trading-Bot-MEXC.git
+cd Trading-Bot-MEXC
+
+Paso 3: Crear y activar un entorno virtual (opcional pero recomendado)
+En CMD, crea y activa un entorno virtual:
+
+python -m venv env
+env\Scripts\activate
+
+Paso 4: Instalar las dependencias
+Con el entorno activado, instala las dependencias:
+
+pip install -r requirements.txt
+
+Paso 5: Configurar las credenciales
+
+    Copia el archivo config.example.py a config.py. Puedes hacerlo desde la terminal:
+
+    copy config.example.py config.py
+
+    Abre el archivo config.py con tu editor preferido y reemplaza los valores de API_KEY y API_SECRET por tus credenciales reales.
+
+Paso 6: Ejecutar el bot
+Ejecuta el bot desde la terminal (CMD o PowerShell):
+
+python MEXCBOT.py
+
+Paso 7: Monitoreo y Ejecución Continua
+
+    El bot mostrará en la consola mensajes informativos sobre su funcionamiento.
+    Para detenerlo, presiona Ctrl+C.
+    Si deseas ejecutar el bot de forma continua, puedes configurar el Programador de tareas de Windows o dejar la terminal abierta en segundo plano.

@@ -1,0 +1,44 @@
+Guía para Linux
+
+Paso 1: Requisitos previos
+
+    Tener instalado Python 3.x (preferiblemente la versión 3.6 o superior).
+    Contar con Git instalado para clonar el repositorio.
+    Tener pip instalado.
+    Se recomienda utilizar un entorno virtual (venv) para aislar las dependencias.
+
+Paso 2: Clonar el repositorio
+Abre una terminal y ejecuta los siguientes comandos:
+
+git clone https://github.com/1nzekt0/Trading-Bot-MEXC.git
+cd Trading-Bot-MEXC
+
+Paso 3: Crear y activar un entorno virtual (opcional pero recomendado)
+Para crear y activar un entorno virtual:
+
+python3 -m venv env
+source env/bin/activate
+
+Paso 4: Instalar las dependencias
+Instala las librerías necesarias utilizando el archivo requirements.txt:
+
+pip install -r requirements.txt
+
+Paso 5: Configurar las credenciales
+
+    Copia el archivo de ejemplo de configuración:
+
+    cp config.example.py config.py
+
+    Abre config.py con tu editor favorito y reemplaza los valores de API_KEY y API_SECRET con tus credenciales reales.
+
+Paso 6: Ejecutar el bot
+Inicia el bot ejecutando:
+
+python bot.py
+
+Paso 7: Monitoreo y Ejecución Continua
+
+    El bot mostrará mensajes en la terminal con información sobre operaciones y estados.
+    Para detenerlo, presiona Ctrl+C.
+    Si deseas que el bot se ejecute en segundo plano, considera utilizar herramientas como screen o tmux.

@@ -35,7 +35,7 @@ Paso 5: Configurar las credenciales
 Paso 6: Ejecutar el bot
 Inicia el bot ejecutando:
 
-python bot.py
+python MEXCBOT.py
 
 Paso 7: Monitoreo y Ejecución Continua
 

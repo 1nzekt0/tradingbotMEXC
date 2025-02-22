@@ -1,0 +1,23 @@
+Condiciones de Compra
+
+    RSI: El bot busca un RSI inferior a 30, lo que indica condiciones de sobreventa.
+    MACD: Se requiere que el valor del MACD sea mayor que su señal, lo que sugiere un cambio hacia un momentum positivo.
+    Banda de Bollinger:
+        El precio actual debe ser inferior al valor de la banda inferior multiplicado por 1.01.
+        Esto significa que el bot espera que el precio esté, aproximadamente, hasta un 1% por encima del límite inferior, lo que podría indicar una oportunidad de compra en zona de descuento.
+    Tamaño de la Operación:
+        El bot utiliza el 100% del saldo disponible en USDT para realizar la compra, convirtiendo todo el balance en la criptomoneda seleccionada.
+
+Condiciones de Venta
+
+    Seguimiento del Precio Máximo:
+        Una vez comprada la posición, el bot monitoriza y actualiza el precio máximo alcanzado (peak_price).
+    Umbral de Retroceso:
+        Se dispara una orden de venta cuando el precio actual cae un 0.25% respecto al precio máximo registrado.
+        Esto se implementa con la condición:
+        current_price <= peak_price * 0.9975
+        Es decir, si el precio retrocede al 99.75% del pico, el bot vende para asegurar ganancias o limitar pérdidas.
+    Cálculo de Ganancia:
+        La ganancia neta se calcula como:
+        ((precio de venta - precio de compra) / precio de compra) * 100
+        Esto permite conocer el rendimiento porcentual de cada operación
